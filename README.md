@@ -6,5 +6,6 @@ My first ever project portfolio for displaying my web projects, mostly designs a
     <li>Firebase Realtime Database and Storage</li>
     <li>NodeJS</li>
     <li>CSS</li>
+    <li>ReactJs</li>
     <li>Bootstrap</li>
 </ul>
