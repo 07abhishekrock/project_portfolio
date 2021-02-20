@@ -1,0 +1,239 @@
+p.text{
+    margin:0px;
+    position:absolute;
+    right:0px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:4vw;
+    width:50%;
+    font-weight:bold;
+    letter-spacing:5px;
+    padding-right:2vw;
+    text-transform:uppercase;
+    line-height:6vw;
+    text-align:right;
+}
+section.first{
+    font-family:"Raleway", sans-serif;
+    position:relative;
+    display:grid;
+    width:100%;
+    grid-template-columns:0.45fr 0.55fr;
+}
+section.first>div.left-wall{
+   position:relative;
+   height:100vh;
+   min-height:800px;
+}
+section.first>div.right-wall{
+    position:relative;
+    height:100vh;
+    min-height:800px;
+}
+section.first>div.background{
+    position:absolute;
+    height:94%;
+    width:100%;
+    top:6%;
+    pointer-events: none;
+}
+section.first>div.background>#cupboard_left{
+    position:absolute;
+    height:100%;
+    width:auto;
+    pointer-events:all;
+}
+section.first>div.background>#avatar_holding_racket{
+    position:absolute;
+    height:78%;
+    bottom:0px;
+    transform:translateX(100%);
+}
+ #face{
+    animation:bounce 0.4s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+#face_2{
+    animation:tap_face 0.4s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+#cupboard_left #left_speaker, #right_speaker{
+    animation:bounce_speakers 0.4s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+#middle_speaker{
+    animation:scale_speakers 0.4s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+section.first>div.background>#avatar_reading_book{
+    position:absolute;
+    height:30%;
+    right:0px;
+    bottom:0px;
+}
+section.first>div.background>#clock{
+    position:absolute;
+    top:0px;
+    height:14%;
+    left:45%;
+    transform:translateX(-50%);
+}
+
+@keyframes bounce{
+    from{
+        transform:translate(-4px,-4px);
+    }
+    to{
+        transform:translate(0px);
+    }
+}
+@keyframes bounce_speakers{
+    from{
+        transform:translateY(4px);
+    }
+    to{
+        transform:translateY(-2px);
+    }
+}
+
+
+@keyframes scale_speakers{
+    from{
+        transform:translateY(3px);
+    }
+    to{
+        transform:translateY(-2px);
+    }
+}
+
+@keyframes tap_face{
+    from{
+        transform:translate(2px , 3px);
+    }
+    to{
+        transform:translate(0px,0px);
+    }
+}
+
+@keyframes tap{
+    from{
+        transform:rotateZ(2deg);
+    }
+    to{
+        transform:rotateZ(0deg);
+    }
+}
+
+
+
+
+
+section.first>button.contact-me{
+    position:absolute;
+    height:6%;
+    font-family:"Raleway", sans-serif;
+    font-size:1vw;
+    padding:0px 3vw;
+    font-weight:bold;
+    background-color:white;
+    border-radius:100px;
+    border:0px solid black;
+    box-shadow:0px 4px 4px rgba(0,0,0,0.3);
+    right:0px;
+    margin-right:1vw;
+    margin-top:1vw;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transition:transform 0.1s ease-in;
+    cursor:pointer;
+}
+section.first>button.contact-me:hover{
+    transform:translateY(-3px);
+}
+ul.color-chooser{
+    position:absolute;
+    z-index:2;
+    padding-left:0px;
+    list-style:none;
+    top:100%;
+    right:0px;
+    display:flex;
+}
+ul.color-chooser>li{
+    width:30px;
+    height:30px;
+    border-radius:100%;
+    margin-right:20px;
+    position:relative;
+    cursor:pointer;
+    box-sizing:border-box;
+    border:2px solid black;
+}
+ul.color-chooser>li:first-child{
+    background-color:#61b3ff;
+}
+ul.color-chooser>li:nth-child(2){
+    background-color:#ffb861;
+}
+ul.color-chooser>li:last-child{
+    background-color:#ff61a3;
+}
+ul.color-chooser>li[select="1"]::after{
+    position:absolute;
+    background-color:rgba(0,0,0,0.2);
+    content:"";
+    width:100%;
+    height:100%;
+    left:0px;
+    border-radius:inherit;
+    background-image:url('../icons/tick_mark.svg');
+    background-size:contain;
+    background-position:center;
+    animation:scale-out 0.4s ease-in;
+}
+@keyframes scale-out{
+    from{
+        transform:scale(0,0);
+    }
+    to{
+        transform:scale(1,1);
+    }
+}
+div.filler{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.0);
+    transition:clip-path 0.4s ease-in;
+    /* animation:clippath 0.4s ease-in; */
+}
+/* make component responsive */
+
+
+@media only screen and (max-width : 780px){
+    section.first{
+        height:400px;
+    }
+    section.first>div.background{
+        height:94%;
+    }
+    section.first>div.left-wall{
+        height:400px;
+        min-height:400px;
+    }
+    section.first>div.right-wall{
+        height:400px;
+        min-height:400px;
+    }
+    section.first>p.text{
+        width:40%;
+    }
+    section.first>div.background>#avatar_holding_racket{
+        transform:translateX(70%);
+    }
+    section.first>button.contact-me{
+        top:2vw;
+        right:2vw;
+        font-size:2vw;
+    }
+}

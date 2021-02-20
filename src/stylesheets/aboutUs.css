@@ -1,0 +1,156 @@
+section.aboutMe{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+section.aboutMe > div.image{
+    position:relative;
+    width:25vw;
+    height:calc(25vw * calc(368 / 337));
+    align-self:center;
+    justify-self:center;
+    overflow:hidden;
+}
+section.aboutMe>div.image>div.bg-avatar{
+    position:absolute;
+    width:25vw;
+    height:25vw;
+    border-radius:100%;
+    top:0px;
+    left:0px;
+}
+section.aboutMe>div.image>div.avatar{
+    position:absolute;
+    top:100%;
+    height:25vw;
+    left:calc(12.5vw - 5.625vw);
+    width:11.25vw;
+    background-size:contain;
+    background-position:center bottom;
+    background-repeat:no-repeat;
+    background-image:url('../icons/avatar.svg');
+    z-index:1;
+    transition:transform 0.4s ease-in ;
+}
+section.aboutMe>div.text{
+    padding:4vw;
+    position:relative;
+    font-family:"Raleway", sans-serif;
+    box-sizing: border-box;
+}
+section.aboutMe>div.text>h1{
+    font-size:4.5vw;
+    font-weight:bold;
+    letter-spacing:2px;
+    width:100%;
+    text-align:right;
+    text-transform:uppercase;
+}
+section.aboutMe>div.text>p{
+    font-size:2vw;
+    line-height:3vw;
+    text-align:right;
+    font-weight:450;
+}
+section.aboutMe>div.text>p>b{
+    display:block;
+    letter-spacing:4px;
+}
+section.aboutMe>div.text>span{
+    display:block;
+    font-size:2vw;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    margin-top:5vw;
+    margin-bottom:1.5vw;
+    width:100%;
+    text-align:right;
+}
+section.aboutMe>div.text>ul>li:first-child{
+    margin-left:0px;
+}
+section.aboutMe>div.text>ul{
+    list-style:none;
+    padding-left:0px;
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+section.aboutMe>div.text>ul>li{
+   font-size:1.5vw;
+   font-weight:bolder; 
+   letter-spacing:2px;
+   text-transform:uppercase;
+   margin-left:20px;
+   padding:10px 30px;
+   margin-bottom:20px;
+   display:flex;
+   align-items:center;
+}
+section.aboutMe>div.text>ul>li>b{
+    font-size:1.8vw;
+}
+section.aboutMe>div.text>div{
+    position:absolute;
+    height:70%;
+    width:0.3vw;
+    border-radius:0.5vw;
+    top:15%;
+    left:0%;
+    background-color: black;
+}
+
+section.aboutMe>div.text>div>span{
+    position:absolute;
+    width:1.5vw;
+    height:1.5vw;
+    border-radius:100%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+@media only screen and (max-width : 700px){
+    section.aboutMe>div.text{
+        padding-top:calc(2vw + 40px);
+    }
+    section.aboutMe{
+        padding-top:calc(2vw + 40px);
+        grid-template-columns:1fr;
+    }
+    section.aboutMe>div.text>h1{
+        text-align:center;
+        font-size:5vw;
+    }
+    section.aboutMe>div.text>p{
+        text-align:center;
+        font-size:3vw;
+        line-height:5vw;
+    }
+    section.aboutMe>div.text>ul{
+        justify-content: center;
+    }
+    section.aboutMe>div.text>ul>li{
+        font-size:2.5vw;
+    }
+    section.aboutMe>div.text>span{
+        margin-top:10vw;
+        font-size:4vw;
+        text-align:center;
+        font-weight:800;
+    }
+    section.aboutMe>div.text>div{
+        width:70%;
+        height:0.7vw;
+        left:50%;
+        transform:translateX(-50%);
+        top:6vw;
+    }
+    section.aboutMe>div.text>div>span{
+        width:3vw;
+        height:3vw;
+    }
+}

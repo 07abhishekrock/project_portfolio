@@ -1,0 +1,177 @@
+section.resume_window{
+    box-sizing:border-box;
+    width:100%;
+    padding:4vw;
+    font-family:'Raleway',sans-serif;
+    position:relative;
+}
+section.resume_window>h1{
+    font-size:5vw;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    width:100%;
+    text-align:center;
+    margin-bottom:7vw;
+}
+section.resume_window>p{
+    font-size:2.5vw;
+    font-weight:450;
+    width:60vw;
+    margin:0px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    transform:translateX(16vw);
+    text-align:center;
+    margin-bottom:7vw;
+}
+
+section.resume_window>button.shadow{
+    transform:translateX(26.78vw);
+}
+section.resume_window>button.shadow:hover{
+    transform:translateX(26.78vw) translateY(-3px);
+    box-shadow:none;
+}
+
+section.resume_window>ul{
+    position:relative;
+    list-style:none;
+    padding:0px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap:0px 5px;
+    height:20vw;
+    margin-bottom:5vw;
+}
+section.resume_window>ul>li{
+    background-color:white;
+    position:relative;
+}
+section.resume_window>ul>li>div{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    display:grid;
+    grid-template-rows:1fr 1.5fr;
+    grid-gap:2vw 0px;
+    overflow:hidden;
+    opacity:0;
+    cursor:pointer;
+    transition:opacity 0.4s ease-in;
+}
+section.resume_window>ul>li>div>span{
+    justify-self:center;
+    transition:transform 0.4s ease-in;
+}
+section.resume_window>ul>li>div>span:first-child{
+    align-self:center;
+    font-size:3vw;
+    font-weight:550;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transform:translateY(-8vw);
+    /* height * 0.4 */
+}
+section.resume_window>ul>li>div>span:last-child{
+    align-self:start;
+    padding:2vw;
+    padding-top:0px;
+    font-weight:450;
+    font-size:1.5vw;
+    letter-spacing:1px;
+    transform:translateY(12vw);
+    /* height * 0.6 */
+}
+section.resume_window>ul>li>div:hover{
+    opacity:1;
+}
+
+section.resume_window>ul>li>div:hover>span{
+    transform:translateY(0vw);
+}
+
+section.resume_window>div{
+display:grid;
+width:60vw;
+grid-template-columns:0.8fr 1fr;
+grid-template-rows:1fr 3fr;
+grid-gap:40px 20px;
+transform:translateX(16vw);
+}
+section.resume_window>div>input{
+    height:4vw;
+    min-height:50px;
+    border:0px solid black;
+    box-sizing: border-box;
+    padding:0px 10px;
+    font-family:"Raleway", sans-serif;
+    letter-spacing: 2px;
+    font-weight:500;
+    font-size:2vw;
+}
+section.resume_window>div>input:focus, section.resume_window>div>textarea:focus{
+    outline:2px solid black;
+}
+
+section.resume_window>div>textarea{
+    border:0px solid black;
+    grid-column: 1 / 3;
+    min-height:100px;
+    padding:20px 10px;
+    font-size:2vw;
+    font-family:"Raleway", sans-serif;
+    margin-bottom:6vw;
+    letter-spacing: 2px;
+    font-weight:550;
+}
+
+section.resume_window>div.social_links{
+    display:flex;
+    transform:translateX(21vw);
+    width:50vw;
+    height:4vw;
+    align-items:center; 
+    justify-content: space-between;
+    margin-bottom:5vw;
+}
+section.resume_window>div.social_links>span{
+    height:100%;
+    width:15vw;
+    background-size:contain;
+    background-position:center;
+    background-image: url('../icons/facebook.svg');
+    background-repeat: no-repeat;
+}
+
+section.resume_window>div.social_links>span:nth-child(2){
+    background-image:url('../icons/linkedin.svg')
+}
+
+section.resume_window>div.social_links>span:last-child{
+    background-image:url('../icons/gmail.svg');
+}
+@media only screen and (max-width : 800px){
+    section.resume_window>ul{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-gap:10px 0px;
+        width:50vw;
+        transform:translateX(21vw);
+        height:auto;
+    }
+    section.resume_window>ul>li{
+        height:33vw;
+    }
+    section.resume_window>div{
+        width:90vw;
+        transform:translateX(1vw);
+    }
+    section.resume_window>div>input{
+        font-size:3vw;
+    }
+    section.resume_window>div>textarea{
+        font-size:3vw;
+    }
+}
